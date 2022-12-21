@@ -68,17 +68,6 @@ export default function Nav() {
                                         </div>
                                     </div>
                                 </div>
-                                {/*Join button*/}
-                                <div className="align-center absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                    <span className="rounded-full bg-none p-2 text-grey hover:text-red-400 hover:scale-105 ">
-                                        <a href="\" target="blank">
-                                            <p className="font-bold tracking-wide max-sm:hidden">
-                                                Sign Up |
-                                            </p>
-                                        </a>
-                                    </span>
-                                    <FaUserCircle className="h-6 w-6 text-grey hover:text-red-400 hover:scale-105" />
-                                </div>
                             </div>
                         </div>
 

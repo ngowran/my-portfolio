@@ -20,7 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-gradient-to-b from-emerald-200 to-emerald-400">
+      <main className="bg-gradient-to-b from-red-50 to-red-100">
         <Nav />
         <Hero />
         <About />
