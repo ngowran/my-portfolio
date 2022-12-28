@@ -9,7 +9,7 @@ const jobs = [
     },
 
     {
-        name: 'Development and Intergration Support Engineer',
+        name: 'Intergration Support Engineer',
         company: 'Global Payments',
         date: 'June 2022 - September 2022',
         description: ['Integrating API and HPP ecommerce solutions with client platforms.', 'Providing real-time technical support and troubleshooting for various client projects.', 'Operating with production code, through Java, .NET, PHP.', 'Working in critical development environments.']
@@ -26,19 +26,19 @@ const jobs = [
         name: 'FreeLance Web Developer',
         company: 'Self Employed',
         date: 'July 2022 - Present',
-        description: ['I am currently working on a number of freelance projects, including the development of a website for a local business.']
+        description: ['Creating full stack web applications and static websites.', 'Strong technical foundation in fullstack technologies and CSS frameworks.', 'Agile development approach, involving regular review with stakeholders', 'Consistently exceeded the expectations of clients and delivered projects that meet their needs and goals']
     }
 ]
 
 export default function Experiance() {
     return (
         <div className="" id="experiance">
-            <h1 className="text-6xl text-center pt-12 font-bold">Experiance</h1>
+            <h1 className="text-6xl text-center pt-16 font-bold">Experiance</h1>
             <br></br>
-            <div className="grid grid-cols-2">
+            <div className="grid md:grid-cols-2">
                 {jobs.map((job, index) => (
                     <div key={index} className="p-6">
-                        <div className=" bg-white rounded-lg shadow-sm p-3">
+                        <div className=" bg-white rounded-lg shadow-sm h-60 p-3">
                             <div className="p-3">
                                 <h2 className="text-4xl font-bold pb-2">{job.name}</h2>
                                 <p className="py-2">

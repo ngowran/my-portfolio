@@ -1,6 +1,6 @@
-import { BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 import { TfiEmail } from 'react-icons/tfi';
-import { FaTwitterSquare } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
 const features = [
     {
@@ -15,6 +15,11 @@ const features = [
             'mailto:nsgowran@gmail.com',
         icon: TfiEmail,
     },
+    {
+        name: "GitHub",
+        link: "https://github.com/ngowran/",
+        icon: FaGithub,
+    }
 ]
 
 export default function Contact() {
@@ -31,7 +36,7 @@ export default function Contact() {
                 </div>
 
                 <div className="mt-10 mb-12 mx-auto items-center justify-center flex">
-                    <dl className="mx-auto space-y-10 md:grid md:grid-cols-2 md:gap-x-20 md:gap-y-12 md:space-y-0">
+                    <dl className="mx-auto space-y-10 md:grid md:grid-cols-3 md:gap-x-20 md:gap-y-12 md:space-y-0">
                         {features.map((feature, index) => (
                             <div key={index} className="relative">
                                 <dt>

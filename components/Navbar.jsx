@@ -8,7 +8,7 @@ import logo from "../public/logo.png";
 export default function Nav() {
     const navigation = [
         { name: "Experiance", href: "#experiance", current: false },
-        { name: "Skills", href: "#skils", current: false },
+        { name: "Skills", href: "#skills", current: false },
         { name: "Projects", href: "#projects", current: false },
         { name: "Contact", href: "#contact", current: false },
     ];
