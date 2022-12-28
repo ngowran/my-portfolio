@@ -26,8 +26,8 @@ export default function Contact() {
     return (
         <div id="contact" className="p-6">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div className="lg:text-center">
-                    <p className="mt-2 text-6xl font-bold leading-8 tracking-tight text-gray-900 sm:text-6xl">
+                <div className="text-center">
+                    <p className="mt-2 text-6xl font-bold  text-gray-900 sm:text-6xl">
                         Get in touch!
                     </p>
                     <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">

@@ -71,7 +71,7 @@ export default function Skills() {
                 <h1 className="text-6xl text-center pt-16 font-bold">Skills</h1>
             </div>
             <br></br>
-            <div className="grid grid-cols-4 ">
+            <div className="grid md:grid-cols-4 grid-cols-2">
                 {skill.map((skillz, index) => (
                     <div key={index}>
                         <div className="p-6 relative group">

@@ -3,7 +3,7 @@ import { BsStarFill } from 'react-icons/bs';
 
 export default function Hero() {
     return (
-        <div className="grid grid-cols-2 pt-20 mx-auto p-auto " id="hero">
+        <div className="grid md:grid-cols-2 pt-20 mx-auto p-auto " id="hero">
             <div className="text-left p-5">
 
                 <h1 className="text-5xl  text-black font-bold"><BsStars className='inline text-amber-400 text-xl align-top' />
