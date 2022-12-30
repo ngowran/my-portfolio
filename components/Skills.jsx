@@ -77,7 +77,7 @@ export default function Skills() {
                             <div className=" w-5/6 h-full mx-auto relative hover:bg-red-600 bg-white rounded-lg shadow-xl p-6 group-hover:opacity-10">
                                 <skillz.icon className="h-20 w-20 mx-auto text-red-400" />
                             </div>
-                            <div className="hidden group-hover:block absolute text-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-black">
+                            <div className="hidden group-hover:block font-bold absolute text-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-black">
                                 <p>{skillz.name}</p>
                             </div>
                         </div>

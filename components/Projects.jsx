@@ -8,19 +8,19 @@ export const projectData = [
     {
         name: "Enactus DCU",
         src: enactus,
-        url: "www.enactusdcu.com",
+        url: "https://www.enactusdcu.com",
         technologies: "NextJS, Tailwind CSS",
     },
     {
         name: "Renu Ireland",
         src: renu,
-        url: "www.renu-ireland.com",
+        url: "https://www.renu-ireland.com",
         technologies: "ReactJS, MaterialUI, Django, MySQL DB, Firebase, Bootstrap",
     },
     {
         name: "Enactus DCU Timelogger",
         src: timelogger,
-        url: "www.github.com/ngowran/Time-Logger",
+        url: "https://www.github.com/ngowran/Time-Logger",
         technologies: "ReactJS, MaterialUI, Django, MySQL DB, Firebase, Bootstrap",
     },
 ];

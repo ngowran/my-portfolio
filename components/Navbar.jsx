@@ -26,10 +26,10 @@ export default function Nav() {
                 {({ open }) => (
                     <>
                         <div className=" mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                            <div className="relative flex h-16 items-center justify-between">
+                            <div className="relative flex h-20 items-center justify-between">
                                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                     {/* Mobile menu button*/}
-                                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-red-100">
                                         <span className="sr-only">Open main menu</span>
                                         {open ? (
                                             <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -51,14 +51,14 @@ export default function Nav() {
                                         </Link>
                                     </div>
                                     <div className="hidden sm:ml-6 sm:block">
-                                        <div className="flex space-x-4 align-middle">
+                                        <div className="flex space-x-4 align-middle my-auto">
                                             {navigation.map((item) => (
                                                 <a
                                                     key={item.name}
                                                     href={item.href}
                                                     className={classNames(
                                                         item.current ? "" : "",
-                                                        "px-7 py-2 rounded-md text-sm font-bold tracking-wide align-middle my-auto hover:text-red-400 hover:scale-105"
+                                                        "px-7 py-4 rounded-md lg:text-md text-sm font-bold tracking-wide align-middle my-auto hover:text-red-400 hover:scale-105"
                                                     )}
                                                     aria-current={item.current ? "page" : undefined}
                                                 >
@@ -72,7 +72,7 @@ export default function Nav() {
                         </div>
 
                         <Disclosure.Panel className="sm:hidden">
-                            <div className="space-y-1 px-2 pt-2 pb-3 align-middle">
+                            <div className="space-y-3 px-2 pt-4 pb-3 align-middle">
                                 {navigation.map((item) => (
                                     <Disclosure.Button
                                         key={item.name}
