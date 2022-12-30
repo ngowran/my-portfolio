@@ -25,7 +25,7 @@ const features = [
 export default function Contact() {
     return (
         <div id="contact" className="p-6">
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-2 pt-16">
                 <div className="text-center">
                     <p className="mt-2 text-6xl font-bold  text-gray-900 sm:text-6xl">
                         Get in touch!

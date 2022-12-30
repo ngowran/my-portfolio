@@ -40,25 +40,25 @@ export default function Nav() {
                                 </div>
                                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                                     <div className="flex flex-shrink-0 items-center">
-                                        <Link href="/">
+                                        <Link href="#hero">
                                             <Image
                                                 src={logo}
-                                                width={50}
-                                                height={50}
-                                                className="block h-8 w-auto rounded-full"
+                                                width={100}
+                                                height={100}
+                                                className="block md:h-14 h-20 max-sm:pt-4 w-auto rounded-full"
                                                 alt="Logo"
                                             />
                                         </Link>
                                     </div>
                                     <div className="hidden sm:ml-6 sm:block">
-                                        <div className="flex space-x-4">
+                                        <div className="flex space-x-4 align-middle">
                                             {navigation.map((item) => (
                                                 <a
                                                     key={item.name}
                                                     href={item.href}
                                                     className={classNames(
                                                         item.current ? "" : "",
-                                                        "px-5 py-2 rounded-md text-sm font-bold tracking-wide hover:text-red-400 hover:scale-105"
+                                                        "px-7 py-2 rounded-md text-sm font-bold tracking-wide align-middle my-auto hover:text-red-400 hover:scale-105"
                                                     )}
                                                     aria-current={item.current ? "page" : undefined}
                                                 >
@@ -72,7 +72,7 @@ export default function Nav() {
                         </div>
 
                         <Disclosure.Panel className="sm:hidden">
-                            <div className="space-y-1 px-2 pt-2 pb-3">
+                            <div className="space-y-1 px-2 pt-2 pb-3 align-middle">
                                 {navigation.map((item) => (
                                     <Disclosure.Button
                                         key={item.name}
@@ -80,7 +80,7 @@ export default function Nav() {
                                         href={item.href}
                                         className={classNames(
                                             item.current ? "" : "",
-                                            "block px-3 py-2 rounded-md text-base font-bold tracking-wide hover:text-red-400 hover:scale-105"
+                                            "block px-5 py-2 rounded-md text-base font-bold tracking-wide align-middle hover:text-red-400 hover:scale-105"
                                         )}
                                         aria-current={item.current ? "page" : undefined}
                                     >
