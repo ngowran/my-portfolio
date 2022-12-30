@@ -31,7 +31,7 @@ export default function Projects() {
             <div>
                 <h1 className="text-6xl text-center pt-16 font-bold">Projects</h1>
             </div>
-            <div className="grid grid-cols-2">
+            <div className="grid md:grid-cols-2 grid-cols-1 pt-4">
                 {projectData.map((project) => (
                     <div className="p-6">
                         <div className="relative flex items-center justify-center  hover:bg-red-300 shadow-xl rounded-xl group">
@@ -41,7 +41,7 @@ export default function Projects() {
                                 alt="{project.name}"
                             />
                             <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                                <h3 className="text-2xl  tracking-wider text-center">
+                                <h3 className="md:text-2xl text-xl font-bold text-center">
                                     {project.name}
                                 </h3>
                                 <p className="pb-4 pt-2 text-center">{project.technologies}</p>

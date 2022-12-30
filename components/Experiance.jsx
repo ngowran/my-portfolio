@@ -26,7 +26,7 @@ const jobs = [
         name: 'FreeLance Web Developer',
         company: 'Self Employed',
         date: 'July 2022 - Present',
-        description: ['Creating full stack web applications and static websites.', 'Strong technical foundation in fullstack technologies and CSS frameworks.', 'Agile development approach, involving regular review with stakeholders', 'Consistently exceeded the expectations of clients and delivered projects that meet their needs and goals']
+        description: ['Creating full stack web applications and static websites.', 'Strong technical foundation in fullstack technologies and CSS frameworks.', 'Agile development approach, involving regular review with stakeholders', 'Consistently exceeded the expectations of clients']
     }
 ]
 
@@ -38,7 +38,7 @@ export default function Experiance() {
             <div className="grid md:grid-cols-2">
                 {jobs.map((job, index) => (
                     <div key={index} className="p-6">
-                        <div className=" bg-white rounded-lg shadow-sm md:h-60 p-3">
+                        <div className=" bg-white rounded-lg shadow-sm h-auto p-3">
                             <div className="p-3">
                                 <h2 className="text-4xl font-bold pb-2">{job.name}</h2>
                                 <p className="py-2">

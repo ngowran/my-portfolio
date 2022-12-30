@@ -73,8 +73,8 @@ export default function Skills() {
             <div className="grid md:grid-cols-4 grid-cols-2">
                 {skill.map((skillz, index) => (
                     <div key={index}>
-                        <div className="p-6 relative group">
-                            <div className=" w-5/6 h-full mx-auto relative bg-white rounded-lg shadow-xl p-6 group-hover:opacity-10">
+                        <div className="p-6 relative  group">
+                            <div className=" w-5/6 h-full mx-auto relative hover:bg-red-600 bg-white rounded-lg shadow-xl p-6 group-hover:opacity-10">
                                 <skillz.icon className="h-20 w-20 mx-auto text-red-400" />
                             </div>
                             <div className="hidden group-hover:block absolute text-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-black">
