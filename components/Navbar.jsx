@@ -78,20 +78,20 @@ export default function Nav() {
                         <Disclosure.Panel className="sm:hidden">
                             <div className="space-y-3 px-2 pt-4 pb-3 align-middle">
                                 {navigation.map((item) => (
-                                    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8, rotate: 360 }}>
-                                        <Disclosure.Button
-                                            key={item.name}
-                                            as="a"
-                                            href={item.href}
-                                            className={classNames(
-                                                item.current ? "" : "",
-                                                "block px-5 py-2 rounded-md text-base font-bold tracking-wide align-middle hover:text-red-400 hover:scale-105"
-                                            )}
-                                            aria-current={item.current ? "page" : undefined}
-                                        >
-                                            {item.name}
-                                        </Disclosure.Button>
-                                    </motion.div>
+
+                                    <Disclosure.Button
+                                        key={item.name}
+                                        as="a"
+                                        href={item.href}
+                                        className={classNames(
+                                            item.current ? "" : "",
+                                            "block px-5 py-2 rounded-md text-base font-bold tracking-wide align-middle hover:text-red-400 hover:scale-105"
+                                        )}
+                                        aria-current={item.current ? "page" : undefined}
+                                    >
+                                        {item.name}
+                                    </Disclosure.Button>
+
                                 ))}
                             </div>
                         </Disclosure.Panel>
