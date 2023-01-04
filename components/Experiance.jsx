@@ -1,7 +1,10 @@
 import { BsStarFill } from 'react-icons/bs';
+import { motion, useMotionValue, AnimatePresence } from "framer-motion"
+import { useState } from 'react';
 
 const jobs = [
     {
+        id: 1,
         name: 'Programming Lab Tutor',
         company: 'Dublin City University',
         date: 'September 2022 - Present',
@@ -9,6 +12,7 @@ const jobs = [
     },
 
     {
+        id: 2,
         name: 'Intergration Support Engineer',
         company: 'Global Payments',
         date: 'June 2022 - September 2022',
@@ -16,6 +20,7 @@ const jobs = [
     },
 
     {
+        id: 3,
         name: 'Chairperson and Developer',
         company: 'Enactus DCU',
         date: 'July 2022 - Present',
@@ -23,6 +28,7 @@ const jobs = [
     },
 
     {
+        id: 4,
         name: 'FreeLance Web Developer',
         company: 'Self Employed',
         date: 'July 2022 - Present',
@@ -30,29 +36,57 @@ const jobs = [
     }
 ]
 
+
 export default function Experiance() {
     return (
         <div className="" id="experiance">
-            <h1 className="text-6xl text-center pt-16 font-bold">Experiance</h1>
+            <AnimatePresence mode="wait">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{
+                        delay: 0.2,
+                        type: "spring",
+                        stiffness: 120,
+                        duration: 3,
+                        bounce: 0.5,
+                    }}>
+                    <h1 className="text-6xl text-center pt-20 font-bold">Experiance</h1>
+                </motion.div>
+            </AnimatePresence>
+
             <br></br>
             <div className="grid md:grid-cols-2">
                 {jobs.map((job, index) => (
                     <div key={index} className="p-6">
-                        <div className=" bg-white rounded-lg shadow-sm h-auto p-3">
-                            <div className="p-3">
-                                <h2 className="text-4xl font-bold pb-2">{job.name}</h2>
-                                <p className="py-2">
-                                    <span className="font-bold">{job.company}</span><span>    <BsStarFill className='inline text-amber-400' />   </span> <span className="text-red-400 font-semibold ">{job.date}</span>
-                                </p>
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                transition={{
+                                    delay: 0.2,
+                                    type: "spring",
+                                    stiffness: 120,
+                                    duration: 3,
+                                    bounce: 0.5,
+                                }}>
+                                <div className=" bg-white rounded-lg shadow-sm h-auto p-3">
+                                    <div className="p-3">
+                                        <h2 className="text-4xl font-bold pb-2">{job.name}</h2>
+                                        <p className="py-2">
+                                            <span className="font-bold">{job.company}</span><span>    <BsStarFill className='inline text-amber-400' />   </span> <span className="text-red-400 font-semibold ">{job.date}</span>
+                                        </p>
 
-                                {job.description.map((des, i) => (
-                                    <div key={i}>
-                                        <ul><li><span className='inline'>-  </span>{des}</li></ul>
+                                        {job.description.map((des, i) => (
+                                            <div key={i}>
+                                                <ul><li><span className='inline'>-  </span>{des}</li></ul>
+                                            </div>
+                                        ))}
+
                                     </div>
-                                ))}
-
-                            </div>
-                        </div>
+                                </div>
+                            </motion.div>
+                        </AnimatePresence>
                     </div>
                 ))}
             </div>
