@@ -27,3 +27,5 @@ const jobs = [
         description: ['Creating full stack web applications and static websites.', 'Strong technical foundation in fullstack technologies and CSS frameworks.', 'Agile development approach, involving regular review with stakeholders', 'Consistently exceeded the expectations of clients']
     }
 ]
+
+export default jobs;

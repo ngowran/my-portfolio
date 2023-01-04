@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 pt-20 mx-auto p-auto " id="hero">
             <motion.div whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
-                className="md:text-left text-center p-5 pl-16 pt-20">
+                className="md:text-left text-center p-5 md:pl-16 pt-20">
 
 
                 <h1 className="text-5xl  text-black font-bold"><BsStars className='inline text-amber-400 text-xl align-top' />

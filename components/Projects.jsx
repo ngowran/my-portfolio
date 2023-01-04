@@ -3,6 +3,7 @@ import renu from "../public/renu-ireland.png";
 import timelogger from "../public/timelogger.png";
 import Image from "next/image";
 import Link from "next/link";
+import Heading from "./Heading";
 
 export const projectData = [
     {
@@ -28,9 +29,7 @@ export const projectData = [
 export default function Projects() {
     return (
         <div className="" id="projects">
-            <div>
-                <h1 className="text-6xl text-center pt-16 font-bold">Projects</h1>
-            </div>
+            <Heading title="Projects" />
             <div className="grid md:grid-cols-2 grid-cols-1 pt-4">
                 {projectData.map((project) => (
                     <div className="p-6">

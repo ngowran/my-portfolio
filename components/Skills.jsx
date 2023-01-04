@@ -7,6 +7,7 @@ import { FaBootstrap } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { FaJsSquare } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import Heading from "./Heading";
 
 const skill = [
     {
@@ -67,20 +68,7 @@ const skill = [
 export default function Skills() {
     return (
         <div className="" id="skills">
-            <AnimatePresence mode="wait">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{
-                        delay: 0.2,
-                        type: "spring",
-                        stiffness: 120,
-                        duration: 3,
-                        bounce: 0.5,
-                    }}>
-                    <h1 className="text-6xl text-center pt-16 font-bold">Skills</h1>
-                </motion.div>
-            </AnimatePresence>
+            <Heading title="Skills" />
             <br></br>
             <div className="grid md:grid-cols-4 grid-cols-2">
                 {skill.map((skillz, index) => (

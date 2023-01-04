@@ -4,6 +4,7 @@ import { FaUserCircle } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/logo.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Nav() {
     const navigation = [
@@ -40,20 +41,23 @@ export default function Nav() {
                                 </div>
                                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                                     <div className="flex flex-shrink-0 items-center">
-                                        <Link href="#hero">
-                                            <Image
-                                                src={logo}
-                                                width={100}
-                                                height={100}
-                                                className="block md:h-14 h-20 max-sm:pt-4 w-auto rounded-full"
-                                                alt="Logo"
-                                            />
-                                        </Link>
+                                        <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8, rotate: 360 }}>
+                                            <Link href="#hero">
+                                                <Image
+                                                    src={logo}
+                                                    width={100}
+                                                    height={100}
+                                                    className="block md:h-14 h-20 max-sm:pt-4 w-auto rounded-full"
+                                                    alt="Logo"
+                                                />
+                                            </Link>
+                                        </motion.div>
                                     </div>
                                     <div className="hidden sm:ml-6 sm:block">
                                         <div className="flex space-x-4 align-middle my-auto">
                                             {navigation.map((item) => (
-                                                <a
+                                                <motion.a
+                                                    whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8, rotate: 180 }}
                                                     key={item.name}
                                                     href={item.href}
                                                     className={classNames(
@@ -63,7 +67,7 @@ export default function Nav() {
                                                     aria-current={item.current ? "page" : undefined}
                                                 >
                                                     {item.name}
-                                                </a>
+                                                </motion.a>
                                             ))}
                                         </div>
                                     </div>
@@ -74,24 +78,26 @@ export default function Nav() {
                         <Disclosure.Panel className="sm:hidden">
                             <div className="space-y-3 px-2 pt-4 pb-3 align-middle">
                                 {navigation.map((item) => (
-                                    <Disclosure.Button
-                                        key={item.name}
-                                        as="a"
-                                        href={item.href}
-                                        className={classNames(
-                                            item.current ? "" : "",
-                                            "block px-5 py-2 rounded-md text-base font-bold tracking-wide align-middle hover:text-red-400 hover:scale-105"
-                                        )}
-                                        aria-current={item.current ? "page" : undefined}
-                                    >
-                                        {item.name}
-                                    </Disclosure.Button>
+                                    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8, rotate: 360 }}>
+                                        <Disclosure.Button
+                                            key={item.name}
+                                            as="a"
+                                            href={item.href}
+                                            className={classNames(
+                                                item.current ? "" : "",
+                                                "block px-5 py-2 rounded-md text-base font-bold tracking-wide align-middle hover:text-red-400 hover:scale-105"
+                                            )}
+                                            aria-current={item.current ? "page" : undefined}
+                                        >
+                                            {item.name}
+                                        </Disclosure.Button>
+                                    </motion.div>
                                 ))}
                             </div>
                         </Disclosure.Panel>
                     </>
                 )}
             </Disclosure>
-        </div>
+        </div >
     );
 }
