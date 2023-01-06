@@ -1,67 +1,59 @@
-import { FaCss3 } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { FaPython } from "react-icons/fa";
-import { FaGitAlt } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaBootstrap } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
-import { FaJsSquare } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import Heading from "./Heading";
+import Css from "../public/skillsicons/css.png";
+import React from "../public/skillsicons/reactjs.png";
+import Python from "../public/skillsicons/python.png";
+import Github from "../public/skillsicons/githubicon.png";
+import Django from "../public/skillsicons/django.png";
+import Html from "../public/skillsicons/html.png";
+import Js from "../public/skillsicons/javascript.png";
+import Mysql from "../public/skillsicons/mysql.png";
+import Tailwind from "../public/skillsicons/tailwindcss.png";
+import Firebase from "../public/skillsicons/firebase.png";
+import Image from "next/image";
+
 
 const skill = [
     {
         name: "React",
-        icon: FaReact,
+        icon: React,
     },
     {
         name: "JavaScript",
-        icon: FaJsSquare,
+        icon: Js,
     },
 
     {
         name: "CSS",
-        icon: FaCss3,
+        icon: Css,
     },
     {
         name: "Python",
-        icon: FaPython,
-    },
-    {
-        name: "C",
-        icon: FaPython,
+        icon: Python,
     },
     {
         name: "Django",
-        icon: FaPython,
+        icon: Django,
     },
     {
         name: "MySQL",
-        icon: FaPython,
-    },
-    {
-        name: "Git",
-        icon: FaGitAlt,
+        icon: Mysql,
     },
     {
         name: "GitHub",
-        icon: FaGithub,
+        icon: Github,
     },
     {
-        name: "Bootstrap",
-        icon: FaBootstrap,
+        name: "Tailwind CSS",
+        icon: Tailwind,
     },
     {
-        name: "Tailwind",
-        icon: FaBootstrap,
-    },
-    {
-        name: "React Native",
-        icon: FaBootstrap,
+        name: "Firebase",
+        icon: Firebase,
     },
     {
         name: "HTML",
-        icon: FaHtml5,
+        icon: Html,
     },
 ];
 
@@ -70,9 +62,9 @@ export default function Skills() {
         <div className="" id="skills">
             <Heading title="Skills" />
             <br></br>
-            <div className="grid md:grid-cols-4 grid-cols-2">
+            <div className="grid md:grid-cols-4 px-10 grid-cols-2">
                 {skill.map((skillz, index) => (
-                    <div key={index}>
+                    <div key={index} className="">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 initial={{ opacity: 0 }}
@@ -84,11 +76,16 @@ export default function Skills() {
                                     duration: 3,
                                     bounce: 0.5,
                                 }}>
-                                <div className="p-6 relative  group">
-                                    <div className=" w-5/6 h-full mx-auto relative hover:bg-red-600 bg-white rounded-lg shadow-xl p-6 group-hover:opacity-10">
-                                        <skillz.icon className="h-20 w-20 mx-auto text-red-400" />
-                                    </div>
-                                    <div className="hidden group-hover:block font-bold absolute text-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-black">
+                                <div className="p-3 relative  group">
+                                    <motion.div whileHover={{ scale: 1.1 }} className=" w-5/6 h-full mx-auto relative hover:bg-red-600 bg-white rounded-lg shadow-xl p-4 group-hover:opacity-10">
+                                        <Image
+                                            src={skillz.icon}
+                                            className="h-20 w-20 mx-auto"
+                                        >
+
+                                        </Image>
+                                    </motion.div>
+                                    <div className="hidden group-hover:block font-bold absolute text-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-black ">
                                         <p>{skillz.name}</p>
                                     </div>
                                 </div>
