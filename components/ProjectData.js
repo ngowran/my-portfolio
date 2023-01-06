@@ -1,8 +1,15 @@
 import enactus from "../public/enactusdcusite.png";
 import renu from "../public/renu-ireland.png";
 import timelogger from "../public/timelogger.png";
+import parkingSite from "../public/parkingSite.png";
 
 const projectData = [
+    {
+        name: "Parking Protect",
+        src: parkingSite,
+        url: "https://www.parking-protect.com",
+        technologies: "NextJs Tailwind CSS"
+    },
     {
         name: "Enactus DCU",
         src: enactus,

@@ -6,8 +6,8 @@ import Heading from './Heading';
 
 export default function Experiance() {
     return (
-        <div className="" id="experiance">
-            <Heading title="Experiance" />
+        <div className="" id="experience">
+            <Heading title="Experience" />
             <br></br>
             <div className="grid md:grid-cols-2">
                 {jobs.map((job, index) => (
@@ -30,7 +30,6 @@ export default function Experiance() {
                                         <p className="py-2">
                                             <span className="font-bold">{job.company}</span><span>    <BsStarFill className='inline text-amber-400' />   </span> <span className="text-red-400 font-semibold ">{job.date}</span>
                                         </p>
-
                                         {job.description.map((des, i) => (
                                             <div key={i}>
                                                 <ul><li><span className='inline'>-  </span>{des}</li></ul>

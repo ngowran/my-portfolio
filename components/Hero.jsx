@@ -9,11 +9,8 @@ export default function Hero() {
             <motion.div whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
                 className="md:text-left text-center mx-auto max-md:p-5 max-md:pl-16 pt-24">
-
-
                 <h1 className="md:text-5xl text-4xl text-black font-bold"><BsStars className='inline text-amber-400 text-xl align-top' />
                     Hi, I'm <span className="text-red-400">Niamh Gowran</span><BsStars className='inline text-amber-400 text-xl align-top' /></h1>
-
                 <br></br>
                 <div className='text-xl text-left md:px-5'>
                     <p><BsStarFill className='inline text-red-400 mx-2' />Student Software Engineer</p>
