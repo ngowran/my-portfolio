@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+.hero-pattern {
+  background-image: url("../public/hero.jpg");
+}
+
 /*
 @media (prefers-color-scheme: dark) {
   html {

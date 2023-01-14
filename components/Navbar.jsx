@@ -22,7 +22,7 @@ export default function Nav() {
         <div>
             <Disclosure
                 as="nav"
-                className="bg-red-50 fixed left-0 w-full z-10 top-0 "
+                className="bg-accent-color shadow-md fixed left-0 w-full z-10 top-0 "
             >
                 {({ open }) => (
                     <>
