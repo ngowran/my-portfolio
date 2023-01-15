@@ -52,7 +52,7 @@ export default function Contact() {
                                     whileHover={{ scale: 1.1 }} >
                                     <dt>
                                         <a href={feature.link} target="blank">
-                                            <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-red-400 text-white">
+                                            <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-text-color text-white">
                                                 <feature.icon className="h-6 w-6" aria-hidden="true" />
                                             </div>
                                             <p className="ml-16 text-lg font-medium leading-10 text-gray-900">{feature.name}</p>

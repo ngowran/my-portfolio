@@ -62,7 +62,7 @@ export default function Nav() {
                                                     href={item.href}
                                                     className={classNames(
                                                         item.current ? "" : "",
-                                                        "px-7 py-4 rounded-md lg:text-md text-sm font-bold tracking-wide align-middle my-auto hover:text-red-400 hover:scale-105"
+                                                        "px-7 py-4 rounded-md lg:text-md text-sm font-bold tracking-wide align-middle my-auto hover:text-text-color hover:scale-105"
                                                     )}
                                                     aria-current={item.current ? "page" : undefined}
                                                 >
@@ -85,7 +85,7 @@ export default function Nav() {
                                         href={item.href}
                                         className={classNames(
                                             item.current ? "" : "",
-                                            "block px-5 py-2 rounded-md text-base font-bold tracking-wide align-middle hover:text-red-400 hover:scale-105"
+                                            "block px-5 py-2 rounded-md text-base font-bold tracking-wide align-middle hover:text-text-color hover:scale-105"
                                         )}
                                         aria-current={item.current ? "page" : undefined}
                                     >

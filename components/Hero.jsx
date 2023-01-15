@@ -7,9 +7,8 @@ export default function Hero() {
         <div >
             {/* <div className=" w-full h-full hero-pattern bg-cover bg-center flex justify-center items-center"> */}
             <div className="grid md:grid-cols-2 pt-20 mx-auto" id="hero">
-                <motion.div whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.8 }}
-                    className="md:text-left text-center mx-auto max-md:p-5 max-md:pl-16 pt-24">
+                <motion.div
+                    className="md:text-left text-center mx-auto max-md:p-5 max-md:pl-16 md:pt-36 pt-24">
                     <h1 className="md:text-5xl text-4xl text-black font-bold"><BsStars className='inline text-amber-400 text-xl align-top' />
                         Hi, I'm <span className="text-text-color">Niamh Gowran</span><BsStars className='inline text-amber-400 text-xl align-top' /></h1>
                     <br></br>

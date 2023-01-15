@@ -77,7 +77,7 @@ export default function Skills() {
                                     bounce: 0.5,
                                 }}>
                                 <div className="p-3 relative  group">
-                                    <motion.div whileHover={{ scale: 1.1 }} className=" w-5/6 h-full mx-auto relative hover:bg-accent-color bg-white rounded-lg shadow-xl p-4 group-hover:opacity-10">
+                                    <motion.div whileHover={{ scale: 1.1 }} className=" w-5/6 h-full mx-auto relative hover:bg-text-color bg-white rounded-lg shadow-xl p-4 group-hover:opacity-10">
                                         <Image
                                             src={skillz.icon}
                                             className="h-20 w-20 mx-auto"

@@ -23,12 +23,12 @@ export default function Experiance() {
                                     duration: 3,
                                     bounce: 0.5,
                                 }}
-                                whileHover={{ scale: 1.1 }} >
+                                whileHover={{ scale: 1.02 }} >
                                 <div className=" bg-white rounded-lg shadow-sm h-auto p-3">
                                     <div className="p-3">
                                         <h2 className="text-4xl font-bold pb-2">{job.name}</h2>
                                         <p className="py-2">
-                                            <span className="font-bold">{job.company}</span><span>    <BsStarFill className='inline text-amber-400' />   </span> <span className="text-red-400 font-semibold ">{job.date}</span>
+                                            <a className='hover:text-text-color ' href={job.link} target={"_blank"}><span className="font-bold hover:scale-150 ">{job.company}</span></a><span>    <BsStarFill className='inline text-amber-400' />   </span> <span className="text-text-color font-semibold ">{job.date}</span>
                                         </p>
                                         {job.description.map((des, i) => (
                                             <div key={i}>

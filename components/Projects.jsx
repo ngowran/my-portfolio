@@ -3,10 +3,6 @@ import Link from "next/link";
 import Heading from "./Heading";
 import projectData from "./ProjectData";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
-
-
 
 export default function Projects() {
 
@@ -28,11 +24,11 @@ export default function Projects() {
                                     bounce: 0.5,
                                 }}
                                 whileHover={{ scale: 1.1 }} >
-                                <motion.div whileTap={{ scale: 0.8 }} className="relative flex items-center justify-center  hover:bg-red-300 shadow-xl rounded-xl group">
+                                <motion.div whileTap={{ scale: 0.8 }} className="relative flex items-c enter justify-center  hover:bg-accent-color shadow-xl rounded-xl group">
                                     <Image
                                         className="rounded-xl group-hover:opacity-10"
                                         src={project.src}
-                                        alt="{project.name}"
+                                        alt={project.name}
                                     />
                                     <motion.div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                                         <h3 className="md:text-2xl text-xl font-bold text-center">
