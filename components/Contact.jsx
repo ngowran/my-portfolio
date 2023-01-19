@@ -29,7 +29,7 @@ export default function Contact() {
         <div id="contact" className="py-16">
             <div className="mx-auto max-w-7xl px-2 ">
                 <Heading title="Get in Touch!" />
-                <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
                     I'm always open to new opportunities and would love to hear from you!
                 </p>
             </div>
