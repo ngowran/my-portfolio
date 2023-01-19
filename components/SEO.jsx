@@ -8,8 +8,8 @@ const seoData = {
     description:
         "Niamh Gowran | Software Engineer ",
     author: "Niamh Gowran",
-    image: "https://scontent-dub4-1.xx.fbcdn.net/v/t39.30808-6/271202676_3161876300723283_5921081619621184968_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=rNVN6IzZ_hMAX-lDUq4&_nc_ht=scontent-dub4-1.xx&oh=00_AfCnxWkr6wt-zGmiv0xLwi3chbPFp_5TezpOEGNncLZnnw&oe=63BFECD3",
-    url: "https://pentonyds-frontend.vercel.app/",
+    image: "",
+    url: "https://niamhgowran.com",
     keywords: [
         "Niamh Gowran",
         "Software Engineer",
