@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Skills from '../components/Skills'
 import Experiance from '../components/Experiance'
-import Seo from '../components/Seo'
+import Seo from '../components/SEO'
 
 
 export default function Home() {
