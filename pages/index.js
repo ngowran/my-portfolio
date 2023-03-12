@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Seo />
-      <main className="bg-background-color">
+      <main className="bg-stone-100">
         <Nav />
         <Hero />
         <Experiance />
