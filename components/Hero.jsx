@@ -1,6 +1,24 @@
 import { BsStars } from 'react-icons/bs';
 import { BsStarFill } from 'react-icons/bs';
+import { BiCodeAlt } from "react-icons/bi";
+import {GoLocation} from "react-icons/go";
+import {MdSchool} from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
+
+const cards = [
+    {
+        icon: <BiCodeAlt className='inline m-auto' />,
+        title: "Full Stack Developer"
+    },
+    {
+        icon: <GoLocation className='inline m-auto' />,
+        title: "Dublin, Ireland",
+    },
+    {
+        icon: <MdSchool className='inline m-auto' />,
+        title: "BSc Computer Science 2021-2025"
+    }
+]
 
 export default function Hero() {
     return (
@@ -8,15 +26,18 @@ export default function Hero() {
             {/* <div className=" w-full h-full hero-pattern bg-cover bg-center flex justify-center items-center"> */}
             <div className="grid md:grid-cols-2 pt-20 mx-auto" id="hero">
                 <motion.div
-                    className="md:text-left text-center mx-auto max-md:p-5 max-md:pl-16 md:pt-36 pt-24">
+                    className="md:text-left text-center mx-auto max-md:p-5 max-md:pl-16 md:pt-12 pt-12">
+                        <button className='hover:scale-110 border-white border-2 p-4 text-white mb-8 font-bold rounded-md shadow-xl shadow-pink-100  bg-gradient-to-r from-emerald-400 to-60% to-pink-300'>Welcome to my Portfolio</button>
                     <h1 className="md:text-5xl text-4xl text-black font-bold"><BsStars className='inline text-amber-400 text-xl align-top' />
-                        Hi, I'm <span className="text-text-color">Niamh Gowran</span><BsStars className='inline text-amber-400 text-xl align-top' /></h1>
+                        Hi, I'm <span className="text-green-600">Niamh Gowran</span><BsStars className='inline text-amber-400 text-xl align-top' /></h1>
                     <br></br>
                     <div className='text-xl text-left md:px-5'>
-                        <p><BsStarFill className='inline text-red-400 mx-2' />Student Software Engineer</p>
-                        <p><BsStarFill className='inline text-red-400 mx-2' />Based in Dublin, Ireland</p>
-                        <p><BsStarFill className='inline text-red-400 mx-2' />Studying Computer Science at DCU</p>
-                        <p><BsStarFill className='inline text-red-400 mx-2' />Full Stack Developer</p>
+                        {cards.map((card) => (
+                            <div key="card" className='p-3 m-3 hover:bg-white hover:shadow-md rounded-md'>
+                               <p className='inline'><span className='text-green-500'>{card.icon} </span>{card.title} </p>
+
+                            </div>
+                        ))} 
                     </div>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.2 }}
