@@ -22,7 +22,7 @@ export default function Nav() {
         <div>
             <Disclosure
                 as="nav"
-                className="bg-stone-100 shadow-sm fixed left-0 w-full z-10 top-0 "
+                className="bg-gradient-to-r from-stone-50 to-90% to-emerald-50 shadow-md fixed left-0 w-full z-10 top-0 "
             >
                 {({ open }) => (
                     <>

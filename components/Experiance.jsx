@@ -24,7 +24,7 @@ export default function Experiance() {
                                     bounce: 0.5,
                                 }}
                                 whileHover={{ scale: 1.02 }} >
-                                <div className=" bg-white rounded-lg shadow-sm h-auto p-3">
+                                <div className=" bg-white rounded-lg shadow-lg h-auto p-3">
                                     <div className="p-3">
                                         <h2 className="text-4xl font-bold pb-2">{job.name}</h2>
                                         <p className="py-2">

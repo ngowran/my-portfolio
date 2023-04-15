@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Footer() {
     return (
-        <div className="text-center shadow-inner p-3 bg-stone-100" id="footer">
+        <div className="text-center shadow-inner p-3 bg-gradient-to-r from-stone-50 to-60% to-emerald-50" id="footer">
             <div className='grid grid-cols-3'>
                 <div className='p-4 m-auto'>
                     <p>Student developer portoflio</p>
