@@ -22,11 +22,12 @@ export default function Nav() {
         <div>
             <Disclosure
                 as="nav"
-                className="bg-gradient-to-r from-stone-50 to-90% to-emerald-50 shadow-md fixed left-0 w-full z-10 top-0 "
+                className=" bg-gradient-to-r from-stone-50 to-90% to-emerald-50 shadow-md fixed left-0 w-full z-10 top-0 "
             >
                 {({ open }) => (
                     <>
-                        <div className=" mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                        
+                        <div className="  mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                             <div className="relative flex h-20 items-center justify-between">
                                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                     {/* Mobile menu button*/}

@@ -3,7 +3,7 @@ const jobs = [
         name: 'Programming Lab Tutor',
         company: 'Dublin City University',
         date: 'September 2022 - Present',
-        description: ['Headhunted to hold this position due to my excellence in computer science at DCU.', 'Teaching the fundamentals of programming to students through Python.', 'Involves resolving complex algorithmic programming problems at a glance.'],
+        description: ['Teaching the fundamentals of programming to students through Python.', 'Involves resolving complex algorithmic programming problems at a glance.', 'Also involving teaching the fundamentals of Web Design, such as the basics of HTML, CSS, JavaScript.'],
         link: 'https://www.dcu.ie/',
     },
 
