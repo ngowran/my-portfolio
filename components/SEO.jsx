@@ -9,7 +9,7 @@ const seoData = {
         "Niamh Gowran | Software Engineer ",
     author: "Niamh Gowran",
     image: "",
-    url: "https://niamhgowran.com",
+    url: "https://www.niamhgowran.ie/",
     keywords: [
         "Niamh Gowran",
         "Software Engineer",
