@@ -1,5 +1,13 @@
 const jobs = [
     {
+        name: "Software Engineer Intern",
+        company: "Microsoft",
+        date: "June 2023 - Present",
+        description: ["Apart of an obserivaiblity team in the Azure platform.", "Working in an agile environment, with daily standups and sprint planning.",],
+        link: "https://www.microsoft.com/",
+
+    },
+    {
         name: 'Programming Lab Tutor',
         company: 'Dublin City University',
         date: 'September 2022 - May 2023',
@@ -18,18 +26,18 @@ const jobs = [
     {
         name: 'Chairperson and Developer',
         company: 'Enactus DCU',
-        date: 'July 2022 - Present',
+        date: 'July 2022 - June 2023',
         description: ['Full stack web development for digital products.', 'Head of research and development / business logic.', 'Leading fellow students to bring innovative social solutions to market.', 'Agile development, completing sprints as team lead.'],
         link: 'https://www.enactusdcu.com/',
     },
 
-    {
+    /*{
         name: 'Web Developer',
         company: 'Self Employed',
         date: 'July 2022 - Present',
         description: ['Creating full stack web applications and static websites.', 'Strong technical foundation in fullstack technologies and CSS frameworks.', 'Agile development approach, involving regular review with stakeholders', 'Consistently exceeded the expectations of clients'],
         link: '/',
-    }
+    }*/
 ]
 
 export default jobs;

@@ -129,13 +129,12 @@ export default function Skills() {
     const hideModal = () => {
         setActiveModal(null);
     };
-    
 
     return (
         <div className="" id="skills">
             <Heading title="Skills" />
             <br></br>
-            <div className="grid md:grid-cols-4 space-y-4 md:space-y-8">
+            <div className="grid md:grid-cols-4 space-y-10 md:space-y-8">
                 {categories.map((category, index) => (
                     <div className="p-4 m-auto mt-4 text-center w-2/3 h-5/6 shadow-lg bg-white rounded-md">
                         <p className="text-center text-2xl mb-2 font-bold">{category.title}</p>
