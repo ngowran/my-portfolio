@@ -131,14 +131,14 @@ export default function Skills() {
     };
 
     return (
-        <div className="" id="skills">
+        <div className="p-3" id="skills">
             <Heading title="Skills" />
             <br></br>
-            <div className="grid md:grid-cols-4 space-y-10 md:space-y-8">
+            <div className="grid md:grid-cols-4 gap-5 items-start">
                 {categories.map((category, index) => (
-                    <div className="p-4 m-auto mt-4 text-center w-2/3 h-5/6 shadow-lg bg-white rounded-md">
-                        <p className="text-center text-2xl mb-2 font-bold">{category.title}</p>
-                        <button onClick={() => showModal(category.title)} type="button" className="bg-gradient-to-r from-pink-400   to-green-400 hover:from-green-400 hover:to-pink-400 text-white font-bold py-2 px-4 m-auto rounded-full">
+                    <div className="p-4 m-auto text-center w-2/3 h-full shadow-lg bg-white rounded-md">
+                        <p className="text-center text-2xl mb-2 font-bold m-0">{category.title}</p>
+                        <button onClick={() => showModal(category.title)} type="button" className="bg-gradient-to-r from-pink-400 to-green-400 hover:from-green-400 hover:to-pink-400 text-white font-bold py-2 px-4 m-auto rounded-full mt-2">
                             View
                         </button>
                         <div id={`defaultModal-${category.title}`} tabindex="-1" aria-hidden="true" className={`fixed top-0 bottom-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full flex items-center justify-center ${activeModal === category.title ? 'block' : 'hidden'}`}>

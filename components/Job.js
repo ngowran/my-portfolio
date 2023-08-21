@@ -3,7 +3,7 @@ const jobs = [
         name: "Software Engineer Intern",
         company: "Microsoft",
         date: "June 2023 - Present",
-        description: ["Apart of an obserivaiblity team in the Azure platform.", "Working in an agile environment, with daily standups and sprint planning.",],
+        description: ["Backend developer in C++, C and eBPF on the Azure Observability.", "Developed a metric emission diagnostic tool.", "Led a team for the Observability Hackathon, adding eBPF to existing products.", "Won Best Fix at a Microsoft Intern Hackathon, introduced an app to reduce company-wide food waste."],
         link: "https://www.microsoft.com/",
 
     },
@@ -16,7 +16,7 @@ const jobs = [
     },
 
     {
-        name: 'Intergration Support Engineer',
+        name: 'Intergration Support Intern',
         company: 'Global Payments',
         date: 'June 2022 - September 2022',
         description: ['Integrating API and HPP ecommerce solutions with client platforms.', 'Providing real-time technical support and troubleshooting for various client projects.', 'Operating with production code, through Java, .NET, PHP.', 'Working in critical development environments.'],
