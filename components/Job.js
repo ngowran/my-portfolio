@@ -2,7 +2,7 @@ const jobs = [
     {
         name: "Software Engineer Intern",
         company: "Microsoft",
-        date: "June 2023 - Present",
+        date: "June 2023 - September 2023",
         description: ["Backend developer in C++, C and eBPF on the Azure Observability.", "Developed a metric emission diagnostic tool.", "Led a team for the Observability Hackathon, adding eBPF to existing products.", "Won Best Fix at a Microsoft Intern Hackathon, introduced an app to reduce company-wide food waste."],
         link: "https://www.microsoft.com/",
 
