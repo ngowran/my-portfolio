@@ -6,58 +6,18 @@ import Python from "../public/skillsicons/python.png";
 import Github from "../public/skillsicons/githubicon.png";
 import Django from "../public/skillsicons/django.png";
 import Html from "../public/skillsicons/html.png";
-import Js from "../public/skillsicons/javascript.png";
+import Next from "../public/skillsicons/nextjs.png";
+import Ts from "../public/skillsicons/ts.png";
 import Mysql from "../public/skillsicons/mysql.png";
 import Tailwind from "../public/skillsicons/tailwindcss.png";
 import Firebase from "../public/skillsicons/firebase.png";
+import AspNet from "../public/skillsicons/aspnet.jpg";
+import Flask from "../public/skillsicons/flask.png";
+import Cplus from "../public/skillsicons/c++.jpg";
+import Influx from "../public/skillsicons/influx.png";
 import Image from "next/image";
 import 'flowbite';
 import { useState, useEffect } from 'react';
-
-
-const skill = [
-    {
-        name: "React",
-        icon: React,
-    },
-    {
-        name: "JavaScript",
-        icon: Js,
-    },
-
-    {
-        name: "CSS",
-        icon: Css,
-    },
-    {
-        name: "Python",
-        icon: Python,
-    },
-    {
-        name: "Django",
-        icon: Django,
-    },
-    {
-        name: "MySQL",
-        icon: Mysql,
-    },
-    {
-        name: "GitHub",
-        icon: Github,
-    },
-    {
-        name: "Tailwind CSS",
-        icon: Tailwind,
-    },
-    {
-        name: "Firebase",
-        icon: Firebase,
-    },
-    {
-        name: "HTML",
-        icon: Html,
-    },
-];
 
 const categories = [
     {
@@ -65,12 +25,20 @@ const categories = [
         bgimage: "bg-gradient-to-r from-stone-50 to-90% to-emerald-50",
         skill: [
             {
+                name: "TypeScript",
+                icon: Ts,
+            },
+            {
+                name: "Next.js",
+                icon: Next,
+            },
+            {
                 name: "React",
                 icon: React,
             },
             {
-                name: "JavaScript",
-                icon: Js,
+                name: "HTML",
+                icon: Html,
             },
             {
                 name: "CSS",
@@ -87,11 +55,19 @@ const categories = [
         bgimage: "bg-gradient-to-r from-stone-50 to-90% to-emerald-50",
         skill: [
             {
-                name: "Python",
-                icon: Python,
+                name: "",
+                icon: Cplus,
             },
             {
-                name: "Django",
+                name: "",
+                icon: AspNet,
+            },
+            {
+                name: "",
+                icon: Flask,
+            },
+            {
+                name: "",
                 icon: Django,
             },
         ],
@@ -101,9 +77,13 @@ const categories = [
         bgimage: "bg-gradient-to-r from-stone-50 to-90% to-emerald-50",
         skill: [
             {
-                name: "MySQL",
+                name: "",
                 icon: Mysql,
             },
+            {
+                name: "",
+                icon: Influx,
+            }
         ],
     },
     {
@@ -162,7 +142,7 @@ export default function Skills() {
                                                         duration: 3,
                                                         bounce: 0.5,
                                                     }}
-                                                    className="grid-cols-1">
+                                                    className="grid-cols-1 my-2">
                                                         <Image src={skillz.icon} className="h-20 w-20 mx-auto"></Image>
                                                         <p className="text-center font-bold">{skillz.name}</p>
                                                    
