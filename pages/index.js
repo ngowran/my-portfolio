@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Seo />
-      <main className="  bg-gradient-to-r from-emerald-50 to-10% to-stone-100">
+      <main className="  bg-gradient-to-r from-zinc-50 to-10% to-zinc-50">
         <Nav />
         <Hero />
         <Experiance />

@@ -114,7 +114,7 @@ export default function Skills() {
         <div className="p-3" id="skills">
             <Heading title="Skills" />
             <br></br>
-            <div className="grid md:grid-cols-4 gap-5 items-start">
+            <div className="grid md:grid-cols-4 gap-5 items-start mt-24">
                 {categories.map((category, index) => (
                     <div className="p-4 m-auto text-center w-2/3 h-full shadow-lg bg-white rounded-md">
                         <p className="text-center text-2xl mb-2 font-bold m-0">{category.title}</p>

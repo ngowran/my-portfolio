@@ -9,7 +9,7 @@ export default function Projects() {
     return (
         <div className="" id="projects">
             <Heading title="Projects" />
-            <div className="grid lg:grid-cols-2 grid-cols-1 p-4">
+            <div className="grid lg:grid-cols-2 grid-cols-1 pb-8 mt-24">
                 {projectData.map((project) => (
                     <div className="p-4 h-5/6 w-5/6 mx-auto">
                         <AnimatePresence mode="wait">
