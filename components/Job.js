@@ -2,8 +2,8 @@ const jobs = [
     {
         name: "Software Engineer Intern",
         company: "Micosoft",
-        date: "March 2024 - Present",
-        description: ["Backend developer in C++ on an Azure Observability team.", "Improved diagnostic logging and backpressure management on the observability agent."],
+        date: "March 2024 - September 2024",
+        description: ["Backend developer in C++ on an Azure Observability team.", "Improved diagnostic logging and backpressure management on a multi tenant monitoring agent."],
         link: "https://www.microsoft.com/",
     },
     {
@@ -30,10 +30,10 @@ const jobs = [
     },
 
     {
-        name: 'Intergration Support Intern',
+        name: 'Integration Support Intern',
         company: 'Global Payments',
         date: 'June 2022 - September 2022',
-        description: ['Integrating API and HPP ecommerce solutions with client platforms.', 'Providing real-time technical support and troubleshooting for various client projects.', 'Operating with production code, through Java, .NET, PHP.', 'Working in critical development environments.'],
+        description: ['Integrating API and HPP e-commerce solutions with client platforms.', 'Providing real-time technical support and troubleshooting for various client projects.', 'Operating with production code, through Java, .NET, PHP.', 'Working in critical development environments.'],
         link: 'https://www.globalpayments.com/',
     },
 

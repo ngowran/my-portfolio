@@ -26,7 +26,7 @@ export default function Hero() {
             {/* <div className=" w-full h-full hero-pattern bg-cover bg-center flex justify-center items-center"> */}
             <div className="grid md:grid-cols-2 pt-20 mx-auto" id="hero">
                 <motion.div
-                    className="md:text-left text-center mx-auto max-md:p-5 max-md:pl-16 md:pt-12 pt-12">
+                    className="md:text-left text-center mx-auto max-md:p-5 max-md:pl-16 md:pt-40 pt-12">
                         <button className='hover:scale-110 border-white border-2 p-4 text-white mb-8 font-bold rounded-md shadow-xl shadow-pink-100  bg-gradient-to-r from-emerald-400 to-60% to-pink-400'>Welcome to my Portfolio</button>
                     <h1 className="md:text-5xl text-4xl text-black font-bold"><BsStars className='inline text-amber-400 text-xl align-top' />
                         Hi, I'm <span className="text-green-600">Niamh Gowran</span><BsStars className='inline text-amber-400 text-xl align-top' /></h1>
