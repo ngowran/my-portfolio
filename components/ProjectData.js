@@ -1,7 +1,7 @@
 import gowTomTech from "../public/gowtomtech.png";
-import renu from "../public/renu-ireland.png";
 import bkms from "../public/bkms.png";
-import parkingSite from "../public/parkingSite.png";
+import flashKing from "../public/flashking.png";
+import userx from "../public/userx.png";
 
 const projectData = [
     {
@@ -17,16 +17,16 @@ const projectData = [
         technologies: "NextJS, Sanity.io",
     },
     {
-        name: "Parking Protect",
-        src: parkingSite,
-        url: "https://www.parking-protect.com",
-        technologies: "NextJs Tailwind CSS"
+        name: "FlashKing",
+        src: flashKing,
+        url: "https://flashking.vercel.app/",
+        technologies: "NextJS, Mongo DB"
     },
     {
-        name: "Renu Ireland",
-        src: renu,
-        url: "https://www.renu-ireland.com",
-        technologies: "ReactJS, MaterialUI, Django, MySQL DB, Firebase, Bootstrap",
+        name: "UserX",
+        src: userx,
+        url: "https://hackireland-team-4.vercel.app/",
+        technologies: "NextJS, Flask, Mongo DB",
     },
 ];
 
