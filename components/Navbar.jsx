@@ -8,10 +8,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Nav() {
     const navigation = [
-        { name: "Experience", href: "#experience", current: false },
-        { name: "Skills", href: "#skills", current: false },
-        { name: "Projects", href: "#projects", current: false },
-        { name: "Contact", href: "#contact", current: false },
+        { name: "Experience", href: "/#experience", current: false },
+        { name: "Skills", href: "/#skills", current: false },
+        { name: "Projects", href: "/#projects", current: false },
+        { name: "Contact", href: "/#contact", current: false },
     ];
 
     function classNames(...classes) {
