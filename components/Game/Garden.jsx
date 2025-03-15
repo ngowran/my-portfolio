@@ -3,12 +3,33 @@ import Flower from "./Flower";
 
 const Garden = ({ numberOfFlowers, onFlowerClick }) => {
   const [activeFlowers, setActiveFlowers] = useState([]);
+  const [windowWidth, setWindowWidth] = useState(0);
   const intervalIdsRef = useRef([]);
 
   const handleFlowerClick = (id) => {
     if (onFlowerClick) {
       onFlowerClick(id);
     }
+  };
+
+  // Track window width for responsive layout
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    
+    // Set initial width
+    handleResize();
+    
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Determine grid columns based on screen size
+  const getGridColumns = () => {
+    if (windowWidth < 640) return 2; // Small screens
+    if (windowWidth < 1024) return 3; // Medium screens
+    return 4; // Large screens
   };
 
   useEffect(() => {
@@ -57,16 +78,22 @@ const Garden = ({ numberOfFlowers, onFlowerClick }) => {
         color={"#b91c1c"}
         isActive={activeFlowers.includes(i)}
         onClick={() => handleFlowerClick(i)}
+        aria-label={`Flower ${i+1}${activeFlowers.includes(i) ? ' (active)' : ''}`}
       />
     );
   }
 
   return (
-    <div className="p-8 m-auto max-w-7xl">
-      <p className="text-center text-xl mb-4 text-gray-500">
+    <div className="p-4 sm:p-6 lg:p-8 m-auto max-w-7xl">
+      <p className="text-center text-lg sm:text-xl mb-4 text-gray-500" id="game-instructions">
         Click a Flower to score
       </p>
-      <div className="grid grid-cols-3 gap-4 transition-all duration-500 ease-in-out border-2">
+      <div 
+        className={`grid gap-2 sm:gap-4 transition-all duration-500 ease-in-out border-2 rounded-lg p-2 sm:p-4`}
+        style={{ gridTemplateColumns: `repeat(${getGridColumns()}, minmax(0, 1fr))` }}
+        role="region"
+        aria-labelledby="game-instructions"
+      >
         {Flowers}
       </div>
     </div>
