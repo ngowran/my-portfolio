@@ -19,8 +19,8 @@ const projectData = [
     {
         name: "FlashKing",
         src: flashKing,
-        url: "https://flashking.vercel.app/",
-        technologies: "NextJS, Mongo DB"
+        url: "https://flashking.io/",
+        technologies: ""
     },
     {
         name: "UserX",
