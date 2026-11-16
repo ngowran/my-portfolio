@@ -1,28 +1,16 @@
-import { FaHeart } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
+import Link from "next/link";
+import { profile } from "../data/profile";
 
 export default function Footer() {
-    return (
-        <div className="text-center shadow-inner p-3 bg-gradient-to-r from-stone-50 to-60% to-emerald-50" id="footer">
-            <div className='grid grid-cols-3'>
-                <div className='p-4 m-auto'>
-                    <p>Student developer portoflio</p>
-                </div>
-                <div className='p-4'>
-                    <motion.p whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.4 }} >Made with
-                        <span> <FaHeart className='text-red-400 inline' /> </span> by Niamh Gowran</motion.p>
-
-                </div>
-                <div className='p-4 m-auto'>
-                    <p>Computer Science Student</p>
-                </div>
-
-
-
-            </div>
-
-
-
-        </div>
-    );
+  return (
+    <footer className="border-t border-zinc-200 dark:border-zinc-800">
+      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-2 px-4 py-8 text-sm text-zinc-500 sm:flex-row sm:px-6">
+        <p>© {new Date().getFullYear()} {profile.name}</p>
+        <p>
+          Built with Next.js &amp; Tailwind ·{" "}
+          <Link href="/game" className="hover:text-brand-600">🌼 play a game</Link>
+        </p>
+      </div>
+    </footer>
+  );
 }

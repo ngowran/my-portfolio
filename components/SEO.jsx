@@ -1,68 +1,52 @@
-import React from "react";
 import Head from "next/head";
-import PropTypes from "prop-types";
+import { profile } from "../data/profile";
 
-// See object prototype on SEO.jsx page
-const seoData = {
-    title: "Niamh Gowran",
-    description:
-        "Niamh Gowran | Software Engineer ",
-    author: "Niamh Gowran",
-    image: "",
-    url: "https://www.niamhgowran.ie/",
-    keywords: [
-        "Niamh Gowran",
-        "Software Engineer",
-        "FullStack Developer",
-        "Frontend Developer",
-        "Backend Developer",
-        "React Developer",
-        "Next.js Developer",
-        "JavaScript Developer",
-        "Dublin City University",
-    ]
-}
-
-function SEO() {
-    return (
-        <Head>
-            <title>{seoData.title}</title>
-            <meta name="title" content={seoData.title} />
-            <meta name="author" content={seoData.author} />
-            <meta name="description" content={seoData.description} />
-            <meta name="keywords" content={seoData.keywords.join(", ")} />
-            <link rel="canonical" href={seoData.url} />
-            {/* Open Graph / Facebook */}
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content={seoData.url} />
-            <meta property="og:title" content={seoData.title} />
-            <meta property="og:description" content={seoData.description} />
-            <meta property="og:image" content={seoData.image} />
-            <meta property="og:site_name" content={seoData.title} />
-            {/* Twitter */}
-            <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:url" content={seoData.url} />
-            <meta property="twitter:title" content={seoData.title} />
-            <meta property="twitter:description" content={seoData.description} />
-            <meta property="twitter:image" content={seoData.image} />
-            <meta name="robots" content="Index" />
-            <link rel="manifest" href="/manifest.json" />
-            {/* Favicon */}
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
-    );
-}
-
-SEO.prototype = {
-    data: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        author: PropTypes.string,
-        description: PropTypes.string,
-        image: PropTypes.string,
-        url: PropTypes.string,
-        keywords: PropTypes.arrayOf(PropTypes.string),
-    }).isRequired,
+const seo = {
+  title: `${profile.name} · ${profile.role} at ${profile.company}`,
+  description: `${profile.name} is a ${profile.role} at ${profile.company} in ${profile.location}, building cloud infrastructure, backend systems and observability tooling with C++, C#, .NET and OpenTelemetry.`,
+  url: profile.links.website,
+  image: `${profile.links.website}logo.png`,
 };
 
-export default SEO;
+export default function SEO() {
+  return (
+    <Head>
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="author" content={profile.name} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+      <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+      <link rel="canonical" href={seo.url} />
+      <link rel="icon" href="/favicon.ico" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
+      <meta property="og:site_name" content={profile.name} />
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: profile.name,
+            jobTitle: profile.role,
+            worksFor: { "@type": "Organization", name: "Microsoft" },
+            alumniOf: "Dublin City University",
+            url: seo.url,
+            sameAs: [profile.links.linkedin, profile.links.github],
+          }),
+        }}
+      />
+    </Head>
+  );
+}
