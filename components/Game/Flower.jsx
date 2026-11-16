@@ -1,114 +1,85 @@
-import React, { useState } from "react";
+import { useId } from "react";
 
-const Flower = ({ id, color, isActive, onClick }) => {
-    const [isWatered, setIsWatered] = useState(false);
+// Pretty SVG sprites for the game. Each one is drawn in a 100x100 box.
 
-    const classNames = `flower ${isActive ? "flower--active" : ""} ${
-        isWatered ? "flower--watered" : ""
-      }`;
-    
-    const clickHandler = (e) => {
-        if (!isWatered) {
-            setIsWatered(true);
-            onClick();
-    
-          setTimeout(() => {
-            setIsWatered(false);
-          }, 1000);
-        }
-    };
+export function Bloom({ hue = 330 }) {
+  const id = useId().replace(/:/g, "");
+  const petal = `hsl(${hue} 85% 72%)`;
+  const petalDeep = `hsl(${hue} 70% 52%)`;
+  return (
+    <svg viewBox="0 0 100 100" className="h-full w-full drop-shadow-md" aria-hidden>
+      <defs>
+        <radialGradient id={`p${id}`} cx="50%" cy="85%" r="90%">
+          <stop offset="0%" stopColor={petalDeep} />
+          <stop offset="100%" stopColor={petal} />
+        </radialGradient>
+        <radialGradient id={`c${id}`} cx="40%" cy="35%" r="70%">
+          <stop offset="0%" stopColor="#fff7c2" />
+          <stop offset="100%" stopColor="#f59e0b" />
+        </radialGradient>
+      </defs>
+      {[...Array(8)].map((_, i) => (
+        <ellipse
+          key={i}
+          cx="50"
+          cy="27"
+          rx="12"
+          ry="22"
+          fill={`url(#p${id})`}
+          transform={`rotate(${i * 45} 50 50)`}
+        />
+      ))}
+      <circle cx="50" cy="50" r="14" fill={`url(#c${id})`} />
+      <circle cx="45" cy="46" r="2" fill="#92400e" opacity=".5" />
+      <circle cx="54" cy="49" r="2" fill="#92400e" opacity=".5" />
+      <circle cx="49" cy="55" r="2" fill="#92400e" opacity=".5" />
+    </svg>
+  );
+}
 
-    const flowerWidth = 200;
-    const flowerHeight = 200 * 1.17;
-    const stemHeight = 50;
-  
-    return (
-      <div className="p-8 m-auto max-w-7xl">
-        <style>
-          {`
-            .flower {
-              width: 200px;
-              height: auto;
-              cursor: pointer;
-              transition: transform 0.3s ease-in-out;
-            }
-            .flower--active {
-              border: 2px solid green;
-            }
-            .flower--watered {
-              opacity: 0.7;
-              transform: scale(1.1);
-            }
-            .p-8 {
-              padding: 2rem;
-            }
-            .m-auto {
-              margin: auto;
-            }
-            .max-w-7xl {
-              max-width: 100%;
-            }
-          `}
-        </style>
-        <div
-        onClick={clickHandler}
-        className={classNames}
-        style={{ color: "pink" }}
-        >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox={`0 0 ${flowerWidth} ${flowerHeight + stemHeight}`}
-        >
-        <defs>
-          <radialGradient
-            id="flower-gradient"
-            cx="50%"
-            cy="50%"
-            r="50%"
-          >
-            <stop offset="0%" stopColor="pink" />
-            <stop offset="100%" stopColor="purple" />
-          </radialGradient>
-        <filter
-              id={`flower-shadow-${id}`}
-              x="0"
-              y="0"
-              width="100%"
-              height="100%"
-            >
-              <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="rgba(0, 0, 0, 0.3)" />
-            </filter>
-          </defs>
+export function Golden() {
+  const id = useId().replace(/:/g, "");
+  return (
+    <svg viewBox="0 0 100 100" className="h-full w-full drop-shadow-[0_0_12px_rgba(251,191,36,0.9)]" aria-hidden>
+      <defs>
+        <radialGradient id={`g${id}`} cx="50%" cy="80%" r="90%">
+          <stop offset="0%" stopColor="#f59e0b" />
+          <stop offset="100%" stopColor="#fde68a" />
+        </radialGradient>
+      </defs>
+      {[...Array(12)].map((_, i) => (
+        <ellipse
+          key={i}
+          cx="50"
+          cy="24"
+          rx="8"
+          ry="24"
+          fill={`url(#g${id})`}
+          stroke="#fff7"
+          strokeWidth="1"
+          transform={`rotate(${i * 30} 50 50)`}
+        />
+      ))}
+      <circle cx="50" cy="50" r="13" fill="#fffbeb" stroke="#f59e0b" strokeWidth="3" />
+      <path d="M50 41 l2.6 5.6 6 .7 -4.5 4.1 1.2 6 -5.3 -3 -5.3 3 1.2 -6 -4.5 -4.1 6 -.7z" fill="#f59e0b" />
+    </svg>
+  );
+}
 
-          <rect
-            x={flowerWidth / 2 - 1}
-            y={flowerHeight}
-            width="4"
-            height={stemHeight}
-            fill="#4caf50"
-          />
-          {[...Array(8)].map((_, i) => (
-            <ellipse
-              key={i}
-              cx={flowerWidth / 2}
-              cy={flowerHeight / 2}
-              rx={50 - i * 10}
-              ry={50 - i * 10}
-              transform={`rotate(${i * 45} ${flowerWidth / 2} ${flowerHeight / 2})`}
-              fill={`url(#flower-gradient)`}
-              filter={`url(#flower-shadow-${id})`}
-            />
-          ))}
-          <circle
-            cx={flowerWidth / 2}
-            cy={flowerHeight / 2}
-            r={20}
-            fill="#ffeb3b"
-          />
-        </svg>
-      </div>
-      </div>
-    );
-  };
-
-export default Flower;
+export function Bee() {
+  return (
+    <svg viewBox="0 0 100 100" className="h-full w-full drop-shadow-md" aria-hidden>
+      <g className="origin-[50px_38px] animate-[wing_120ms_ease-in-out_infinite_alternate]">
+        <ellipse cx="38" cy="32" rx="14" ry="18" fill="#e0f2fe" opacity=".85" stroke="#7dd3fc" strokeWidth="1.5" transform="rotate(-25 38 32)" />
+        <ellipse cx="62" cy="32" rx="14" ry="18" fill="#e0f2fe" opacity=".85" stroke="#7dd3fc" strokeWidth="1.5" transform="rotate(25 62 32)" />
+      </g>
+      <ellipse cx="50" cy="58" rx="26" ry="22" fill="#facc15" stroke="#1c1917" strokeWidth="2.5" />
+      <path d="M38 39 q-3 19 0 38" stroke="#1c1917" strokeWidth="7" fill="none" />
+      <path d="M53 36 q-3 22 0 44" stroke="#1c1917" strokeWidth="7" fill="none" />
+      <path d="M75 52 l9 6 -9 6" fill="#1c1917" />
+      <circle cx="31" cy="54" r="3.5" fill="#1c1917" />
+      <circle cx="30" cy="53" r="1.2" fill="#fff" />
+      <path d="M26 63 q4 3 8 0" stroke="#1c1917" strokeWidth="1.8" fill="none" strokeLinecap="round" />
+    </svg>
+  );
+}

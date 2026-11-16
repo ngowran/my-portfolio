@@ -1,104 +1,81 @@
-import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { FaUserCircle } from "react-icons/fa";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { HiBars3, HiXMark } from "react-icons/hi2";
 import logo from "../public/logo.png";
-import { motion, AnimatePresence } from "framer-motion";
+
+const navigation = [
+  { name: "Experience", href: "/#experience" },
+  { name: "Education", href: "/#education" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Contact", href: "/#contact" },
+];
 
 export default function Nav() {
-    const navigation = [
-        { name: "Experience", href: "/#experience", current: false },
-        { name: "Skills", href: "/#skills", current: false },
-        { name: "Projects", href: "/#projects", current: false },
-        { name: "Contact", href: "/#contact", current: false },
-    ];
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    function classNames(...classes) {
-        return classes.filter(Boolean).join(" ");
-    }
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-    return (
-        <div>
-            <Disclosure
-                as="nav"
-                className=" bg-gradient-to-r from-zinc-50 to-90% to-zinc-50 shadow-md fixed left-0 w-full z-10 top-0 "
-            >
-                {({ open }) => (
-                    <>
-                        
-                        <div className="  mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                            <div className="relative flex h-20 items-center justify-between">
-                                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                                    {/* Mobile menu button*/}
-                                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-red-100">
-                                        <span className="sr-only">Open main menu</span>
-                                        {open ? (
-                                            <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                                        ) : (
-                                            <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                                        )}
-                                    </Disclosure.Button>
-                                </div>
-                                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                    <div className="flex flex-shrink-0 items-center">
-                                        <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8, rotate: 360 }}>
-                                            <Link href="#hero">
-                                                <Image
-                                                    src={logo}
-                                                    width={100}
-                                                    height={100}
-                                                    className="block md:h-14 h-20 max-sm:pt-4 w-auto rounded-full"
-                                                    alt="Logo"
-                                                />
-                                            </Link>
-                                        </motion.div>
-                                    </div>
-                                    <div className="hidden sm:ml-6 sm:block">
-                                        <div className="flex space-x-4 align-middle my-auto">
-                                            {navigation.map((item) => (
-                                                <motion.a
-                                                    whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8, rotate: 180 }}
-                                                    key={item.name}
-                                                    href={item.href}
-                                                    className={classNames(
-                                                        item.current ? "" : "",
-                                                        "px-7 py-4 rounded-md lg:text-md text-sm font-bold tracking-wide align-middle my-auto hover:text-text-color hover:scale-105"
-                                                    )}
-                                                    aria-current={item.current ? "page" : undefined}
-                                                >
-                                                    {item.name}
-                                                </motion.a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+  return (
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        scrolled || open
+          ? "border-b border-zinc-200/70 bg-white/80 backdrop-blur-md dark:border-zinc-800/70 dark:bg-zinc-950/80"
+          : "border-b border-transparent"
+      }`}
+    >
+      <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
+        <Link href="/#top" className="flex items-center gap-2 font-semibold text-zinc-900 dark:text-white">
+          <Image src={logo} alt="" width={32} height={32} className="h-8 w-8 rounded-full" priority />
+          <span>Niamh Gowran</span>
+        </Link>
 
-                        <Disclosure.Panel className="sm:hidden">
-                            <div className="space-y-3 px-2 pt-4 pb-3 align-middle">
-                                {navigation.map((item) => (
+        <ul className="hidden items-center gap-1 md:flex">
+          {navigation.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="rounded-md px-3 py-2 text-sm font-medium text-zinc-600 transition hover:text-brand-600 dark:text-zinc-400 dark:hover:text-brand-400"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-                                    <Disclosure.Button
-                                        key={item.name}
-                                        as="a"
-                                        href={item.href}
-                                        className={classNames(
-                                            item.current ? "" : "",
-                                            "block px-5 py-2 rounded-md text-base font-bold tracking-wide align-middle hover:text-text-color hover:scale-105"
-                                        )}
-                                        aria-current={item.current ? "page" : undefined}
-                                    >
-                                        {item.name}
-                                    </Disclosure.Button>
+        <button
+          type="button"
+          className="rounded-md p-2 text-zinc-700 md:hidden dark:text-zinc-300"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label={open ? "Close menu" : "Open menu"}
+        >
+          {open ? <HiXMark className="h-6 w-6" /> : <HiBars3 className="h-6 w-6" />}
+        </button>
+      </nav>
 
-                                ))}
-                            </div>
-                        </Disclosure.Panel>
-                    </>
-                )}
-            </Disclosure>
-        </div >
-    );
+      {open && (
+        <ul className="space-y-1 px-4 pb-4 md:hidden">
+          {navigation.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="block rounded-md px-3 py-2 font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-900"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </header>
+  );
 }
